@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@import 'tailwindcss';
+
+:root {
+  --reset-aqua: #72D6DC;
+  --reset-turquoise: #25AEB7;
+  --reset-blue-50: #F3FCFD;
+  --reset-blue-100: #E3F7F8;
+  --reset-blue-200: #C8EEF1;
+  --background: #FAFDFD;
+  --surface: #FFFFFF;
+  --text-primary: #161A1B;
+  --text-secondary: #5F6B6D;
+  --text-soft: #899496;
+  --border: #D8EAEC;
+  --white: #FFFFFF;
+  --shadow-soft: 0 18px 42px rgba(37, 174, 183, 0.09);
+
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background: rgba(114, 214, 220, 0.24);
+}
+
+@keyframes reset-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.42;
+  }
+  50% {
+    transform: scale(1.025);
+    opacity: 0.7;
+  }
+}
+
+.breathe-ring {
+  animation: reset-breathe 10s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .breathe-ring {
+    animation: none;
+  }
+}
